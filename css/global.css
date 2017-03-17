@@ -1,0 +1,412 @@
+/*
+
+colors:
+Orange: #f47710
+Navbar Gray: #303030
+Black: #202020
+White: #f0f0f0
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed);
+
+
+/*~~~~~~~~~~~~~~OTHER STYLES~~~~~~~~~~~~~~*/
+
+h1, h2, h3, h4 ,h5 ,h6, p, button, li, span, small{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}	
+
+blockquote{
+	margin: 30px;
+	padding-left: 20px;
+
+	border-top: 0px;
+	border-left: 5px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-style: solid;
+	border-color: #f47710;
+}
+
+
+
+/* ~~~~~~~~~~~~MIN WIDTHS ~~~~~~~~~~~*/
+#sideNav{
+	min-width: 172px;
+}
+
+.content{
+	min-width: 690px;
+	height: -moz-calc(100vh - 65px);
+    height: -webkit-calc(100vh - 65px);
+    height: calc(100vh - 65px);
+    padding-bottom: 65px;
+    margin-bottom: 0px;
+    overflow: auto;
+}
+
+footer{
+	min-width: 690px;
+}
+
+
+/*~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~*/
+
+#sideNav{
+	position: fixed;
+	height: 100vh;
+	background-color: #303030;
+	width: 20%;
+	z-index: 9001;
+	opacity: 0.95;
+}
+
+#sideNav a{
+	text-decoration: none;
+}
+
+#sideNav h1{
+	margin: 0;
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+.smallNavButton img{
+		display: none;
+	}	
+
+#navItems{
+	text-align: right;
+	list-style: none;
+	padding: none;
+	margin-right: 10%;
+	color: #f0f0f0;
+	margin-top: 0;
+
+	display: block;
+    top: 7em;
+}
+
+#navItems a{
+	color: #f0f0f0;
+}
+
+#navItems a li{
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-top: 10px;
+	margin-top: 0px;
+}
+
+
+#navItems a #navSelected{
+	color: #f47710;;
+}
+
+#navItems li:hover{
+	color: #f47710;
+}
+
+#navFooter{
+	bottom: 0;
+	position: absolute;
+	list-style: none;
+	text-align: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+#navFooter li{
+	padding-top: 5px;
+	padding-left: 5px;
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+}
+
+
+#navFooter button{
+	margin-bottom: 5px;
+	margin-left: 6px;
+	padding: 5px 10px 4px 10px;
+    font-size: 14px;
+  	text-decoration: none;
+  	background-color: #f0f0f0;
+  	border: none;
+  	border-radius: 4px;
+}
+
+#navFooter a button:hover{
+	background: #f47710;
+	color: #f0f0f0;
+}
+
+#navFooter button:active, button:focus{
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#resumeFace{
+    height: auto;
+    width: 150px;
+    position: fixed;
+    bottom: 75px;
+    left: -200px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~FACT~~~~~~~~~~~~~~~~~~*/
+
+.factBox{
+	padding: 10px;
+}
+
+.factDisclaimer{
+	line-height: 10px;
+}
+
+.factDisclaimer small{
+	font-size: 8px;
+	line-height: 4px;
+	color: #f0f0f0;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~FOOTER~~~~~~~~~~~~~~~~~~*/
+
+footer{
+	opacity: 0.75;
+	height: 65px;
+	color: #f0f0f0;
+	background-color: #202020;
+	position: fixed;
+	bottom: 0;
+	width: 80%;
+	margin-left: 20%;
+	font-size: 12px;
+}
+
+footer div{
+	overflow: auto;
+	height: 100%;
+	display: block;
+}
+
+footer p{
+	margin-top: 25px;
+	margin-left: 30px;
+	float: left;
+}
+
+#connect{
+	float: right;
+	list-style: none;
+	margin-top: 23px;
+	margin-right: 30px;
+}
+#connect span{
+	margin-left: 13px;
+	margin-right: 10px;
+	color: #f47710;
+}
+
+#connect li{
+	display: inline-block;
+}
+
+#connect li{
+	text-decoration: none;
+	color: white;
+}
+
+#connect li:hover{
+	text-decoration: none;
+	color: #f47710;
+}
+
+.content{
+	margin-left: 20%
+}
+
+/*~~~~~~~~~~~~~~~~MOBILE NAV~~~~~~~~~~~~~~*/
+
+
+@media (max-width: 890px){
+
+	.content{
+		padding-top: 64px;
+	}
+
+	.smallNavButton img{
+		width: 50px;
+		float: right;
+		padding-top: 5px;
+		padding-right: 15px;
+		display: block;
+	}	
+
+	#sideNav{
+		display: none;
+		height: 4em;
+		width: 100%;
+	}
+
+	#sideNav h1{
+		padding: 20px 20px 17px 17px;
+		display: inline-block;
+		font-size: 1.7em;
+    	width: 200px;
+    	text-align: left;	
+    }
+
+    #navItems{
+		padding-top: 8px;
+		display: none;
+		text-align: left;
+		background-color: #303030;
+		margin: 0;
+
+		border-top: 1px;
+		border-left: 0px;
+		border-right: 0px;
+		border-bottom: 0px;
+		border-style: solid;
+		border-color: #f47710;
+	}
+
+	#navItems li{
+		padding-top: 10px;
+		text-align: left;
+		background-color: #303030;
+		padding: 0.75em;
+		font-size: 1em;
+	}
+
+	.content{
+		margin-left: 0;
+	}
+
+	#navFooter{
+		display: none;
+	}
+	footer{
+		margin-left: 0;
+		width: 100%;
+		min-width: 500px;
+	}
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~Mobile Device (find a better way of doing this)~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media (max-device-width: 890px){
+	.content{
+		padding-top: 112px;
+	}
+
+	.smallNavButton img{
+		width: 100px;
+		float: right;
+		padding-top: 5px;
+		padding-right: 15px;
+		display: block;
+	}	
+
+
+	#sideNav{
+		height: 7em;
+		width: 100%;
+	}
+
+	#sideNav h1{
+		padding: 30px 30px 43px 46px;
+		display: inline-block;
+		font-size: 3.5em;
+    	width: 200px;
+    	text-align: left;	
+    	font-size: 2.5em;
+    }
+
+	#navItems{
+		display: none;
+		text-align: left;
+		background-color: #303030;
+		margin: 0;
+		width: 100%;
+
+		position: fixed;
+		border-top: 1px;
+		border-left: 0px;
+		border-right: 0px;
+		border-bottom: 0px;
+		border-style: solid;
+		border-color: #f47710;
+	}
+
+	#navItems li{
+		text-align: left;
+		background-color: #303030;
+		padding: 1em;
+	}
+
+	#navItems a li{
+		font-size: 3em;
+		padding-top: 1em;
+	}
+
+
+	.content{
+		margin-left: 0;
+	}
+
+	#navFooter{
+		display: none;
+	}
+
+	#connect{
+		font-size: 2.5em;
+		margin-top: 16px;
+		margin-right: 16px;
+	}
+
+	footer{
+		margin-left: 0;
+		width: 100%;
+	}
+
+	footer p{
+		font-size: 2.5em;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+
+
+.subContainer{
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #202020;
+}
+
+.imageThumbnail{
+    background-size: cover;
+    background-position: left center;
+}
+
+/* ~~~~~~~~~~~~~~Column 1~~~~~~~~~~~~~~~~*/
+
+.col1{
+    height: 300px;
+    background-color: #202020;
+    float: left;
+    width: 37%;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* ~~~~~~~~~~~~~~Column 2~~~~~~~~~~~~~~~~*/
+
+.col2{
+    height: 300px;
+    background-color: #f0f0f0;
+    float: left;
+    width: 37%;
+
+    border: 0;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: #202020;
+}
+
+.textContainer{
+    margin: 40px;
+}
+
+.textContainer h2{
+    padding-top:15px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-size: 1em;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.textContainer h1{
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+.textContainer p{
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.textContainer a{
+    text-decoration: none;
+    color: #f47710;
+}
+
+.textContainer a:hover{
+    text-decoration: underline;
+}
+
+.textContainer .contextLabel {
+    background-color: #f47710;
+    color: white;
+    padding: 4px;
+    margin-bottom: 12px;
+    display: inline;
+    font-size: 13px;
+}
+
+
+/* ~~~~~~~~~~~~~~Column 3~~~~~~~~~~~~~~~~*/
+
+.col3{
+    height: 300px;
+    background-color: #f47710;
+    display: block;
+    overflow: auto;
+}
+
+.text{
+    padding: 10px 10px;
+}
+
+.text ul{
+    list-style: none;
+}
+
+.text ul li{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.text h3 {
+    padding-top: 5px;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+.col2Hovered {
+    background-color: #D0D0D0;
+}
+/*~~~~~~~~~~~~~RESIZING~~~~~~~~~~~~*/
+
+
+
+@media (max-width: 890px){
+    .subContainer{
+        border:0;
+    }
+
+    .col1{
+        width: 50%;
+        float: left;
+
+        border: 0;
+        border-right: 1px;
+        border-style: solid;
+        border-color: #202020;
+    }
+
+    .col2{
+        width: 100%;
+        height: 200px;
+
+        border: 0;
+        border-bottom: 1px;
+        border-top: 1px;
+        border-style: solid;
+        border-color: #202020;
+    }
+
+    .col3{
+    }
+}
+
+/* ---------------- mobile ------------*/
+
+@media (max-device-width: 890px){
+    .subContainer{
+        border:0;
+    }
+
+    .col1{
+        width: 50%;
+        float: left;
+        height: 30vh;
+        border: 0;
+    }
+
+    .col2{
+        width: 50%;
+        height: 30vh;
+        float: right;
+
+        border: 0;
+        border-bottom: 1px;
+        border-top: 1px;
+        border-style: solid;
+    }
+    .textContainer .contextLabel{
+        font-size: 1em;
+    }
+    .textContainer{
+        font-size: 1.9em;
+    }
+
+    .col3{
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+.content{
+	overflow: auto;
+	margin-bottom: 65px;
+}
+
+.subContainer{
+	overflow: hidden;
+	border: 0;
+	width: 100%;
+
+	border: 0;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #202020;
+}
+
+/*~~~~~~~~~~~~~~~Column~~~~~~~~~~~~~~~*/
+.col1{
+	height: 300px;
+	background-color: #f0f0f0;
+	float: left;
+	width: 50%;
+	max-width: 400px;
+	background-size: cover;
+	background-position: center center;
+
+	border: 0;
+	border-right: 1px;
+	border-style: solid;
+	border-color: #202020;
+}
+
+.col1:hover{
+	cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~~Column 2~~~~~~~~~~~~~~~~*/
+
+.col2{
+	height: 300px;
+	width: 100%;
+	background-color: #f47710;
+}
+
+/* ~~~~~~~~~~~~~~Dropdown~~~~~~~~~~~~~~~~*/
+
+.dropdown{
+	height: 150px;
+	background-color: #f0f0f0;
+	width: 100%;
+	display: block;
+
+	border: 0;
+	border-top: 1px;
+	border-style: solid;
+	border-color: #202020;
+}
+
+@media (max-width: 600px){
+	.col1{
+		max-width: none;
+		float:none;
+		width: 100%;
+	}
+
+}

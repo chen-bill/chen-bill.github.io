@@ -1,0 +1,123 @@
+/*
+ blueish ; #6fa8dc
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.personalityType{
+    width: 100%;
+    background-color: #6fa8dc;
+    height: 300px;
+    line-height: 300px;
+    font-size: 4em;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: black solid 2px
+}
+
+.energyBar{
+    width: 100%;
+    display: flex;
+    /*flex-flow: row wrap;*/
+    /*justify-content: ;*/
+}
+.energySection{
+    width: 8.33%;
+    height: 5vh;
+    display: inline-block;
+    border: solid black 2px;
+    border-left: 0;
+}
+
+.personalityLabel{
+    width: 100%;
+    background-color: red;
+    font-size: 4em;
+    height: 10vh;
+    line-height: 10vh;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: black solid 2px
+}
+
+.statContainer{
+    width: 100%;
+    height: 40vh;
+
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.statContainer div{
+	width: 50%;
+	heigth: 20vh;
+	box-sizing: border-box;
+	border: 1px solid gray;
+}
+
+.sleepColor{
+	background-color: #6fa8dc;
+	/*color: #6fa8dc;*/
+}
+
+.academicColor{
+	background-color: #ffd966;
+	/*color: #ffd966;*/
+}
+
+.happyColor{
+	background-color: #93c47d;
+	/*color: #93c47d;*/
+}
+
+.socialColor{
+	background-color: #e06666;
+	/*color: #e06666;*/
+}
+
+.fullEnergy{
+    background-color: #93c47d;
+}
+
+.emptyEnergy{
+    background-color: red;
+}
+
+.statContainer{
+    width: 100%;
+}
+
+.statMarkerContainer{
+    display: flex;
+    width: 100%;
+    background-color: gray;
+}
+
+.statMarker{
+    width: 25%;
+    height: 10vh;
+    line-height:10vh;
+    text-align: center;
+	box-sizing: border-box;
+    display: inline-block;
+    background-color: transparent !important;
+}
+
+.resetButton{
+    width: 100%;
+    height: 35vh;
+    background-color: green;
+}
+
+

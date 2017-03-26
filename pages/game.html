@@ -1,0 +1,67 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>BillChen.ca</title>
+        <!-- Chrome mobile header colors -->
+        <meta name="theme-color" content="#f47710">
+        <meta name="msapplication-navbutton-color" content="#f47710">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#f47710">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/game.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="../js/game.js"></script>
+    </head>
+
+    <body ng-app="angularGame">
+        <div ng-controller="gameController">
+            <div class='personalityType' ng-repeat="personality in allPersonalityTypes" 
+                    ng-click="selectPersonality(personality)" 
+                    ng-if="!current.personalityType.name">
+                {{personality.name}}
+            </div>
+            <div ng-if="current.personalityType.name">
+                <div class="energyBar">
+                    <div class="fullEnergy energySection" ng-repeat="i in getNumber(current.energy) track by $index">
+                    </div>
+                    <div class="emptyEnergy energySection" ng-repeat="i in getNumber(12 - current.energy) track by $index">
+                    </div>
+                </div>
+                <div class="personalityLabel">
+                    {{current.personalityType.name}}
+                </div>
+                <div class="statContainer">
+                    <div id="sleepButton" class="sleepColor" ng-click="clickStatButton('sleep')">
+                        Sleep
+                    </div>
+                    <div id="academicButton" class="academicColor" ng-click="clickStatButton('academic')">
+                        Academic
+                    </div>
+                    <div id="happyButton" class="happyColor" ng-click="clickStatButton('happy')">
+                        Happiness
+                    </div>
+                    <div id="socialButton" class="socialColor" ng-click="clickStatButton('social')">
+                        Social
+                    </div>
+                </div>
+                <div class="statMarkerContainer">
+                    <div id="sleepMarker" class="statMarker sleepColor">
+                        {{current.statMarker.sleep}}
+                    </div>
+                    <div id="academicMarker" class="statMarker academicColor">
+                        {{current.statMarker.academic}}
+                    </div>
+                    <div id="happinessMarker" class="statMarker happyColor">
+                        {{current.statMarker.happy}}
+                    </div>
+                    <div id="socialMarker" class="statMarker socialColor">
+                        {{current.statMarker.social}}
+                    </div>
+                </div>
+                <div class="resetButton" ng-click="resetStats()">
+                    reset
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

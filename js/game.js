@@ -36,8 +36,8 @@
                 'name': 'Hibernator',
                 'hoursRequired': {
                     'sleep': 3,
-                    'academic': 4,
-                    'happy': 5,
+                    'academic': 5,
+                    'happy': 3,
                     'social': 4
                 },
             },

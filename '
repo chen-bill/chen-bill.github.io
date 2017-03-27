@@ -8,39 +8,30 @@
             {
                 'name': 'Academist',
                 'hoursRequired': {
-                    'sleep': 4,
+                    'sleep': 2,
                     'academic': 3,
                     'happy': 3,
-                    'social': 5
-                },
-            },
-            {
-                'name': 'Social Butterfly',
-                'hoursRequired': {
-                    'sleep': 3,
-                    'academic': 4,
-                    'happy': 5,
                     'social': 3
                 },
-            },
-            {
-                'name': 'Happy Go Lucky',
-                'hoursRequired': {
-                    'sleep': 4,
-                    'academic': 5,
-                    'happy': 3,
-                    'social': 3
-                },
-            },
-            {
-                'name': 'Hibernator',
-                'hoursRequired': {
-                    'sleep': 3,
-                    'academic': 4,
-                    'happy': 5,
-                    'social': 4
-                },
-            },
+                //'styling' : {
+                    //'sleep': {
+                        //'image': '',
+                        //'color': ''
+                    //},
+                    //'academic': {
+                        //'image': '',
+                        //'color': ''
+                    //},
+                    //'happy': {
+                        //'image': '',
+                        //'color': ''
+                    //},
+                    //'social': {
+                        //'image': '',
+                        //'color': ''
+                    //}
+                //}
+            }
         ];
         
         $scope.current = {
@@ -110,23 +101,6 @@
             }
         }
 
-        $scope.getStatGainStyle = function(stat){
-            styleObject = {};
-            if (stat == 'sleep'){
-                styleObject['background-color'] = '#6fa8dc'
-            } else if (stat == 'academic'){
-                styleObject['background-color'] = '#ffd966'
-            } else if (stat == 'happy'){
-                styleObject['background-color'] = '#93c47d'
-            } else {
-                styleObject['background-color'] = '#e06666'
-            }
-            if($scope.current.personalityType.hoursRequired[stat]>$scope.current.energy){
-                styleObject['opacity'] = 0.5;
-            }
-            return styleObject;
-        }
-
         $scope.getDoubleButtonColor = function(stat){
             if($scope.current.doubleCost[stat]){
                 return {'background-color':'#585858'};
@@ -143,6 +117,7 @@
                 $scope.current.doubleCost[stat] = true;
                 $scope.current.personalityType.hoursRequired[stat] *= 2;
             }
+            console.log($scope.current);
         }
     });
 })();

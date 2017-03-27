@@ -31,35 +31,25 @@
                     {{current.personalityType.name}}
                 </div>
                 <div class="statContainer">
-                    <div id="sleepButton" class="sleepColor" ng-click="clickStatButton('sleep')">
-                        Sleep
-                    </div>
-                    <div id="academicButton" class="academicColor" ng-click="clickStatButton('academic')">
-                        Academic
-                    </div>
-                    <div id="happyButton" class="happyColor" ng-click="clickStatButton('happy')">
-                        Happiness
-                    </div>
-                    <div id="socialButton" class="socialColor" ng-click="clickStatButton('social')">
-                        Social
-                    </div>
-                </div>
-                <div class="statMarkerContainer">
-                    <div id="sleepMarker" class="statMarker sleepColor">
-                        {{current.statMarker.sleep}}
-                    </div>
-                    <div id="academicMarker" class="statMarker academicColor">
-                        {{current.statMarker.academic}}
-                    </div>
-                    <div id="happinessMarker" class="statMarker happyColor">
-                        {{current.statMarker.happy}}
-                    </div>
-                    <div id="socialMarker" class="statMarker socialColor">
-                        {{current.statMarker.social}}
+                    <div class="incrementContainer" ng-repeat="(stat, cost) in current.personalityType.hoursRequired">
+                        <div class="increaseStatButton" ng-style="getStatGainStyle(stat)" ng-click="clickStatButton(stat)">
+                            <img ng-src="{{getStatImage(stat)}}"/>
+                            <div>
+                            -{{cost}}
+                            </div>
+                        </div>
+                        <div class="doubleCostButton" 
+                                ng-style="getDoubleButtonColor(stat)"
+                                ng-click="clickDoubleCostButton(stat)">
+                            -50%
+                        </div>
+                        <div class="statsGained" ng-style="getStatColor(stat)">
+                            +{{current.statMarker[stat]}}
+                        </div>
                     </div>
                 </div>
                 <div class="resetButton" ng-click="resetStats()">
-                    reset
+                    Reset
                 </div>
             </div>
         </div>

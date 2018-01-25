@@ -1,0 +1,53 @@
+#mobileNav{
+  display: none;
+}
+
+#navItemsMobile{
+  display: none;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#navItemsMobile li{
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navItemsMobile li a{
+  color: white;
+}
+
+#navItemsMobile i{
+  font-size: 7em;
+  color: #0767d0;
+}
+
+@media screen and (max-width: 800px) {
+  #navItemsMobile{
+    display: flex;
+  }
+  #sideNav{
+    background-color: transparent;
+    width: 100%;
+  }
+  .content{
+    background-color: transparent;
+  }
+  #navContent{
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #name{
+    margin-top: 7vh;
+    font-size: 8em;
+    text-align: center;
+  }
+  #blurb{
+    font-size: 3em;
+    text-align: center;
+  }
+  #navItems{
+    display: none;
+  }
+}

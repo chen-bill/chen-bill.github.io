@@ -3,15 +3,18 @@ if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navi
 
     $('#resumeButton').mouseover(function() {
       var newSrc;
-      if ($('#resumeFace').css("right") == "-150px"){
+      console.log(parseInt($('#resumeFace').css("right")));
+      if (parseInt($('#resumeFace').css("right")) >= -150){
         newSrc = $('#resumeFace').attr("src").match(/[^\.]+/).input.replace('sad','happy');
+        $('#resumeFace').clearQueue()
         $('#resumeFace').attr("src",newSrc).animate({"right": '0px'}, 200);
       }
     });
 
     $('#resumeButton').mouseout(function() {
+      console.log(parseInt($('#resumeFace').css("right")));
       var newSrc;
-      if ($('#resumeFace').css("right") == "0px"){
+      if (parseInt($('#resumeFace').css("right")) <= 0){
         newSrc = $('#resumeFace').attr("src").match(/[^\.]+/).input.replace('happy','sad');
         $('#resumeFace').attr("src", newSrc).animate({"right": '-150px'}, 500);
       }

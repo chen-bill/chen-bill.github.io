@@ -4,6 +4,7 @@ colors:
 blue: #0767d0
 Black: #202020
 White: #f0f0f0
+salmon: #E67172
 
  */
 
@@ -25,7 +26,7 @@ ul, li {
 .videoContainer{
   width: 100%;
   height: 100vh;
-  background-color: rgba(7, 103, 208, 0.5);
+  /*background-color: rgba(230, 112, 113, 0.4);*/
 }
 
 video { 
@@ -43,12 +44,12 @@ video {
 }
 
 #name{
-  color: #0767d0;
+  color: #E67172;
   font-size: 3em;
 }
 
 .keyWord{
-  border-bottom: 1px dashed #0767d0;
+  border-bottom: 1px dashed #E67172;
   display: inline;
 }
 
@@ -99,7 +100,7 @@ video {
 
 #navItems li a:hover{
   display: inline;
-  color: #0767d0;
+  color: #E67172;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -111,7 +112,7 @@ video {
 
 #emailNotification{
   display: none;
-  background-color: #0767d0;
+  background-color: #E67172;
   font-size: 0.8em;
   padding: 4px 6px;
   border-radius: 8px;
@@ -140,7 +141,7 @@ video {
 
 #navItemsMobile i{
   font-size: 7em;
-  color: #0767d0;
+  color: #E67172;
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -168,7 +169,7 @@ video {
     text-align: center;
   }
   .keyWord{
-    border-bottom: 3px dashed #0767d0;
+    border-bottom: 3px dashed #E67172;
   }
   #blurb{
     font-size: 3em;

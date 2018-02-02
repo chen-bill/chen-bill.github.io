@@ -144,6 +144,12 @@ video {
   color: #E67172;
 }
 
+.point{
+  font-size: 0.5em !important;
+  padding-right: 4px;
+  color: gray;
+}
+
 @media only screen and (max-device-width: 1024px) {
   #navItemsMobile{
     display: flex;

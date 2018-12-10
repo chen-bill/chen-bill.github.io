@@ -21,6 +21,7 @@ if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navi
     });
 
     $('#contact').click(function(){
+      $('#emailNotification').clearQueue();
       var copyText = document.getElementById("email");
       copyText.select();
       document.execCommand("Copy");

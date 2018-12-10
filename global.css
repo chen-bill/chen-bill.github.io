@@ -160,7 +160,9 @@ video {
   }
   .videoContainer{
     background-color: transparent;
-    background-image: url("assets/cereal.png")
+    background-image: url("assets/cereal.png");
+    background-repeat:no-repeat;
+    background-size:cover;
 
     /*filter: grayscale(100%);*/
     /*-webkit-filter: grayscale(100%);*/
